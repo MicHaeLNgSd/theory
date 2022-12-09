@@ -40,5 +40,5 @@ let filterByDateV2 = cars.filter((item) => item.registration.includes('08.12.202
 console.log('filterByDate', filterByDateV2);
 
 //спробуй тепер < заданої дати.
-let filterByDateEarlier = cars.filter((item) => (item.registration < '08.12.2022') ? true : false)
+let filterByDateEarlier = cars.filter((item) => item.registration < '08.12.2022')
 console.log('filterByDateEarlier', filterByDateEarlier);
