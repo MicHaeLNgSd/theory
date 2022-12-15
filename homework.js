@@ -1,6 +1,7 @@
 // область видимості змінної, замикання, поняття hoisting 
 // Завдання по масивам
 // Даний масив 
+//console.log(new Date().getTime());
 console.log("=====================");
 let cars = [
     {
@@ -58,6 +59,7 @@ let filterByDateV4 = cars.filter((item) => item.registration.toLocaleDateString(
 //V5
 let filterByDateV5 = cars.filter((item) => item.registration.getTime() == new Date('2022-12-08').getTime())
 //console.log('filterByDat', filterByDateV5);
+//console.log(new Date().getTime());
 
 //V6 //TODO idk why its not working...
 let filterByDateV6 = cars.filter((item) => item.registration == new Date('2022-12-08'))
@@ -111,7 +113,7 @@ let filterByDateToday = cars.filter((item) => item.registration == Date());
 //щоб тобі шукало лише по поточному місяцю і року.
 let filterByMonthYearStupid = cars.filter((item) => item.registration.getMonth() + 1 == '12' && item.registration.getFullYear() == '2022')
 let filterByMonthYear = cars.filter((item) => item.registration.getMonth() == new Date().getMonth() && item.registration.getFullYear() == new Date().getFullYear())
-console.log('filterByMonthYear', filterByMonthYearStupid);
+//console.log('filterByMonthYear', filterByMonthYearStupid);
 
 // let filterByMonthYearTest = cars.filter((item) => {
 //     console.log(item.registration.getMonth() + 1);
@@ -120,3 +122,9 @@ console.log('filterByMonthYear', filterByMonthYearStupid);
 //     console.log(new Date().getMonth());
 //     console.log(new Date().getFullYear());
 // });
+
+
+//TODO=========================================================================================================
+
+cars = cars.filter((item) => item.registration.getMonth() + 1 != '12')
+console.log(cars);
